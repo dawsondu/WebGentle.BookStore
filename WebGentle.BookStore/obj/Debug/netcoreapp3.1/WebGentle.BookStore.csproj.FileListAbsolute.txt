@@ -144,3 +144,6 @@ F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\WebGentle.BookSto
 F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\WebGentle.BookStore.RazorTargetAssemblyInfo.cs
 F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\WebGentle.BookStore.Views.pdb
+F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
+F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Book\GetAllBooks.cshtml.g.cs
+F:\projects\C#\P14\WebGentle.BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ContactUs.cshtml.g.cs
