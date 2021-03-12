@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebGentle.BookStore.Models;
+using WebGentle.BookStore.Models.Repository;
 
 namespace WebGentle.BookStore.Controllers
 {
@@ -12,18 +14,24 @@ namespace WebGentle.BookStore.Controllers
         //{
         //    return View();
         //}
+        private  readonly BookRepository _bookRepository = null;
+        public BookController()
+        {
+            _bookRepository = new BookRepository();
+        }
 
-        public string GetAllBooks()
+        public ViewResult GetAllBooks()
         {
-            return "All Books";
+            var data = _bookRepository.GetAllBooks();
+            return View();
         }
-        public string GetBook( int id )
+        public BookModel GetBook( int id )
         {
-            return $"Book with id={id}";
+            return _bookRepository.GetBookById(id);
         }
-        public string SearchBooks(string bookName,string authorName)
+        public List<BookModel> SearchBooks(string bookName,string authorName)
         {
-            return $"Book with name={bookName} and author ={authorName}";
+            return _bookRepository.SearchBook(bookName,authorName);
         }
 
     }
