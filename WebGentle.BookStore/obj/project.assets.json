@@ -8730,19 +8730,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Dawson\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\projects\\C#\\P14\\WebGentle.BookStore\\WebGentle.BookStore.csproj",
+      "projectUniqueName": "D:\\projects\\CSharp\\P1\\WebGentle.BookStore\\WebGentle.BookStore.csproj",
       "projectName": "WebGentle.BookStore",
-      "projectPath": "F:\\projects\\C#\\P14\\WebGentle.BookStore\\WebGentle.BookStore.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "F:\\projects\\C#\\P14\\WebGentle.BookStore\\obj\\",
+      "projectPath": "D:\\projects\\CSharp\\P1\\WebGentle.BookStore\\WebGentle.BookStore.csproj",
+      "packagesPath": "C:\\Users\\Dawson\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\CSharp\\P1\\WebGentle.BookStore\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8809,7 +8813,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
