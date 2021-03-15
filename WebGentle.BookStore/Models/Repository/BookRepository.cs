@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using WebGentle.BookStore.Models;
 
 namespace WebGentle.BookStore.Models.Repository
-{
+{ 
     public class BookRepository
     {
         public List<BookModel> GetAllBooks()

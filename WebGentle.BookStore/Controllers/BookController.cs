@@ -26,6 +26,7 @@ namespace WebGentle.BookStore.Controllers
 
             return View(data);
         }
+        [Route("book-detail/{id}",Name="bookdetailsRoute")] //重新命名路由，将"/getbook/1",改名为"/book-detail/1"
         public ViewResult GetBook( int id )
         {
             var data =  _bookRepository.GetBookById(id);

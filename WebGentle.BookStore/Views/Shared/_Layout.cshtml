@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand-sm  navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="~/images/logo.jpg" width="60" height="60" />
+                    <img src="~/images/logo.jpg" width="60" height="60" asp-append-version="true"/>
                     Book Store
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,16 +28,16 @@
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a href="/" class="nav-link text-dark">Home</a>
+                            <a class="nav-link text-dark" asp-controller="home" asp-action="index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home/aboutus" class="nav-link text-dark">About</a>
+                            <a class="nav-link text-dark" asp-controller="home" asp-action="aboutus">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/home/contactus" class="nav-link text-dark">Contact</a>
+                            <a class="nav-link text-dark" asp-controller="home" asp-action="contactus">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/book/getallbooks" class="nav-link text-dark">All books</a>
+                            <a asp-controller="book" asp-action="getallbooks" class="nav-link text-dark">All books</a>
                         </li>
                     </ul>
                 </div>

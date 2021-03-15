@@ -1,7 +1,4 @@
-﻿@model IEnumerable<BookModel>
-
-
-<div class="container">
+﻿<div class="container">
     <h3>All Books</h3>
     <div class="row">
         @foreach (var book in Model)
@@ -11,7 +8,7 @@
 
             <h3>@book.Title</h3>
             <p>@book.Description</p>
-            <p><a class="btn btn-secondary" href="/book/getbook/@book.Id">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary"asp-route="bookdetailsRoute" asp-route-id="@book.Id" asp-fragment="similarbook">View details &raquo;</a></p>
             <small class="text-muted">@book.Author</small>
         </div>
         }
