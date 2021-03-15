@@ -4,8 +4,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Book Store Application</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet" />    
+    <environment names="Development">
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    </environment>
+    <environment names="Production">
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    </environment>
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -38,6 +43,9 @@
                         </li>
                         <li class="nav-item">
                             <a asp-controller="book" asp-action="getallbooks" class="nav-link text-dark">All books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="book" asp-action="addnewbook" class="nav-link text-dark">Add New Book</a>
                         </li>
                     </ul>
                 </div>
