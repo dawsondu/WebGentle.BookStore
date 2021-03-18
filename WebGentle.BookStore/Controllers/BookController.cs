@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,9 +42,31 @@ namespace WebGentle.BookStore.Controllers
         [HttpGet]
         public ViewResult AddNewBook(bool isSuccess = false,int bookId=0)
         {
+
+            var model = new BookModel()
+            {
+                Language = "2"
+            };  //set the default value into "English"
+            var group1 = new SelectListGroup() {Name="Group1" };
+            var group2 = new SelectListGroup() {Name="Group2",Disabled=true };
+            var group3 = new SelectListGroup() {Name="Group3" };
+
+            //ViewBag.Language = new SelectList(GetLanguage(),"Id","Text");
+            ViewBag.Language = new List<SelectListItem>() 
+            {
+                new SelectListItem(){ Text="Hindi",Value="1",Group = group1},
+                new SelectListItem(){ Text="English",Value="2",Group = group1},
+                new SelectListItem(){ Text="Dutch",Value="3",Group = group2},
+                new SelectListItem(){ Text="Tamil",Value="4",Group = group2},
+                new SelectListItem(){ Text="Urdu",Value="5",Group = group3},
+                new SelectListItem(){ Text="Chinese",Value="6",Group = group3},
+            };
+
+
+
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
-            return View();
+            return View(model);
 
         }
         [HttpPost]
@@ -57,10 +80,20 @@ namespace WebGentle.BookStore.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
-            ViewBag.IsSuccess = false;
-            ViewBag.BookId = 0;
+            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
+            //ViewBag.IsSuccess = false;
+            //ViewBag.BookId = 0;
 
             return View();
+        }
+        private List<LanguageModel> GetLanguage()
+        {
+            return new List<LanguageModel>()
+            {
+                new LanguageModel() {Id=1,Text = "Hindi" },
+                new LanguageModel() {Id=2,Text = "English" },
+                new LanguageModel() {Id=3,Text = "Dutch" },
+            };
         }
     }
 }

@@ -8,8 +8,8 @@ namespace WebGentle.BookStore.Models
 {
     public class BookModel
     {
-        [DataType(DataType.Password)]
-        public string MyField { get; set; }
+        //[DataType(DataType.Password)]
+        //public string MyField { get; set; }
         public int Id { get; set; }
         [Required(ErrorMessage ="Please enter the title of your book.")]
         public string Title { get; set; }
