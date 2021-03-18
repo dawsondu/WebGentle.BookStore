@@ -45,10 +45,11 @@ namespace WebGentle.BookStore.Controllers
 
             var model = new BookModel()
             {
-                Language = "2"
+                //Language = "2"
             };  //set the default value into "English"
             var group1 = new SelectListGroup() {Name="Group1" };
-            var group2 = new SelectListGroup() {Name="Group2",Disabled=true };
+            //var group2 = new SelectListGroup() {Name="Group2",Disabled=true };
+            var group2 = new SelectListGroup() {Name="Group2"};
             var group3 = new SelectListGroup() {Name="Group3" };
 
             //ViewBag.Language = new SelectList(GetLanguage(),"Id","Text");
